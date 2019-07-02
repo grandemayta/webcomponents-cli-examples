@@ -1,10 +1,10 @@
 class GithubProfile extends HTMLElement {
     static get observedAttributes() {
-        return ['nickname']
+        return ['nickname'];
     }
 
     get nickname() {
-        return this.getAttribute('nickname')
+        return this.getAttribute('nickname');
     }
 
     async connectedCallback() {
@@ -16,7 +16,7 @@ class GithubProfile extends HTMLElement {
     }
 
    async render() {
-        const data = await ( await fetch(`https://api.github.com/users/${this.nickname}`)).json();
+        const data = await ( await fetch(`https://api.github.com/users/${this.nickname}`) ).json();
         this.innerHTML = `
             <h1>${data.name}</h1>
             <h2>${data.bio}</h2>
