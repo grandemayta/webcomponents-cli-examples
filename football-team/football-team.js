@@ -1,4 +1,4 @@
-import { TOKEN, BASE_URL } from './constants.js';
+import { TOKEN, BASE_URL } from './constants.js.js';
 
 class FootballTeam extends HTMLElement {
     static get observedAttributes() {
